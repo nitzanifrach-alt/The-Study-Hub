@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>פורטל חומרי לימוד - ניצן יפרח</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background-color: #FDF4F8; padding: 15px; direction: rtl; margin: 0; }
+    
+    .header { background: #FFFFFF; border: 1px solid #FBCFE8; padding: 15px 20px; border-radius: 12px; margin-bottom: 15px; }
+    .header h1 { font-size: 20px; color: #1F2937; margin: 0 0 5px 0; }
+    .header p { color: #DB2777; font-size: 13px; margin: 0; font-weight: bold; }
+    
+    .banner { background: #FCE7F0; padding: 15px 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #FBCFE8; }
+    .banner-tag { background: #FFFFFF; color: #7E22CE; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 10px; display: inline-block; margin-bottom: 5px; }
+    .banner h2 { color: #1F2937; font-size: 16px; margin: 0 0 5px 0; }
+    .banner p { color: #4B5563; font-size: 12px; margin: 0; line-height: 1.4; }
+    
+    .cats-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .cat-btn { background-color: #F3E8FF; color: #7E22CE; font-size: 12px; font-weight: bold; padding: 8px 14px; border-radius: 10px; cursor: pointer; border: 1px solid #E9D5FF; }
+    .cat-btn.active { background-color: #C084FC; color: white; border-color: #A855F7; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; }
+    .card { background: #FFFFFF; border: 1px solid #FBCFE8; border-radius: 12px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; }
+    .badge-cat { background-color: #FCE7F0; color: #DB2777; font-size: 10px; font-weight: bold; padding: 3px 8px; border-radius: 6px; display: inline-block; margin-bottom: 8px; }
+    .badge-tag { background-color: #F3E8FF; color: #7E22CE; font-size: 10px; font-weight: bold; padding: 3px 6px; border-radius: 4px; float: left; }
+    .card-title { font-size: 15px; font-weight: bold; color: #1F2937; margin-bottom: 6px; }
+    .card-desc { font-size: 12px; color: #6B7280; margin-bottom: 15px; line-height: 1.4; }
+    .card-bottom { border-top: 1px solid #FDF4F8; padding-top: 10px; }
+    .btn-download { color: #7E22CE; font-size: 12px; font-weight: bold; text-decoration: none; }
+    
+    footer { margin-top: 30px; border-top: 1px solid #FBCFE8; padding-top: 12px; display: flex; justify-content: space-between; font-size: 11px; color: #6B7280; }
+    .support-text { color: #DB2777; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>מאגר הסיכומים והסילבוסים</h1>
+    <p>מנהל עסקים • הקריה האקדמית אונו</p>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <span class="banner-tag">ברוכים הבאים לפורטל הלמידה שלנו</span>
+    <h2>כל החומרים מרוכזים במקום אחד בצורה נוחה ונגישה</h2>
+    <p>כאן תוכלו למצוא את כל סיכומי ההרצאות, הסילבוסים, חומרי העזר והמצגות שהכנתי עבור הקורסים. פשוט לחצו על "צפייה / הורדה" כדי להגיע לקובץ בגוגל דרייב!</p>
+  </div>
+
+  <!-- Categories -->
+  <div class="cats-bar">
+    <button class="cat-btn active" onclick="filterCat('all', this)">הכל (6)</button>
+    <button class="cat-btn" onclick="filterCat('hr', this)">ניהול משאבי אנוש (2)</button>
+    <button class="cat-btn" onclick="filterCat('academic', this)">אוריינות אקדמית (2)</button>
+    <button class="cat-btn" onclick="filterCat('law', this)">משפט עסקי (1)</button>
+    <button class="cat-btn" onclick="filterCat('marcom', this)">ניהול התקשורת והפרסום (1)</button>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid">
+    
+    <!-- 1. ניהול משאבי אנוש: סילבוס -->
+    <div class="card hr">
+      <div>
+        <span class="badge-tag">סילבוס</span>
+        <span class="badge-cat">ניהול משאבי אנוש</span>
+        <div class="card-title">סילבוס קורס ניהול משאבי אנוש - תשפ"ו</div>
+        <div class="card-desc">פירוט המפגשים, מועדי הגשות, מטלות ורשימת קריאת החובה.</div>
+      </div>
+      <div class="card-bottom">
+        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download">🔗 צפייה / הורדה</a>
+      </div>
+    </div>
+
+    <!-- 2. ניהול משאבי אנוש: סיכום מורחב -->
+    <div class="card hr">
+      <div>
+        <span class="badge-tag">סיכום</span>
+        <span class="badge-cat">ניהול משאבי אנוש</span>
+        <div class="card-title">סיכום מורחב - ניהול משאבי אנוש (64 עמודים)</div>
+        <div class="card-desc">סיכום מקיף ומפורט של כל חומרי הקורס, נושאי הליבה וההרצאות.</div>
+      </div>
+      <div class="card-bottom">
+        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download">🔗 צפייה / הורדה</a>
+      </div>
+    </div>
+
+    <!-- 3. אוריינות אקדמית: סילבוס -->
+    <div class="card academic">
+      <div>
+        <span class="badge-tag">סילבוס</span>
+        <span class="badge-cat">אוריינות אקדמית</span>
+        <div class="card-title">סילבוס קורס אוריינות אקדמית</div>
+        <div class="card-desc">פירוט המושגים, כללי ציטוט אקדמי (APA) והנחיות לכתיבת עבודה אקדמית.</div>
+      </div>
+      <div class="card-bottom">
+        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download">🔗 צפייה / הורדה</a>
+      </div>
+    </div>
+
+    <!-- 4. אוריינות אקדמית: תעודת זהות של הטקסט -->
+    <div class="card academic">
+      <div>
+        <span class="badge-tag">סיכום</span>
+        <span class="badge-cat">אוריינות אקדמית</span>
+        <div class="card-title">ששת רכיבי תעודת הזהות של הטקסט</div>
+        <div class="card-desc">פירוט 6 הרכיבים (מחבר, כותרת, מקום פרסום, שנת הוצאה וכו') וחלוקת המושגים למישור עיוני ואישי.</div>
+      </div>
+      <div class="card-bottom">
+        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download">🔗 צפייה / הורדה</a>
+      </div>
+    </div>
+
+    <!-- 5. משפט עסקי: פסק דין קידום -->
+    <div class="card law">
+      <div>
+        <span class="badge-tag">סיכום</span>
+        <span class="badge-cat">משפט עסקי</span>
+        <div class="card-title">ניתוח פסק דין קידום "לך תצטיין" והיררכיית החקיקה</div>
+        <div class="card-desc">סיכום עקרונות המשפט החוקתי והעסקי, מדרג הנורמות ודעות השופטים דורנר, בך וחשין.</div>
+      </div>
+      <div class="card-bottom">
+        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download">🔗 צפייה / הורדה</a>
+      </div>
+    </div>
+
+    <!-- 6. ניהול התקשורת והפרסום: תמהיל השיווק -->
+    <div class="card marcom">
+      <div>
+        <span class="badge-tag">סיכום</span>
+        <span class="badge-cat">ניהול התקשורת והפרסום</span>
+        <div class="card-title">תמהיל השיווק (4Ps) והמרקום (Marcom)</div>
+        <div class="card-desc">הסברים ודוגמאות על תמהיל השיווק, תקשורת שיווקית ודירוג היררכי.</div>
+      </div>
+      <div class="card-bottom">
+        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn-download">🔗 צפייה / הורדה</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span>נוצר על ידי ניצן יפרח • הקריה האקדמית אונו</span>
+    <span class="support-text">📞 אם חוויתם תקלה באתר תפנו אליי 0542315046</span>
+  </footer>
+
+  <script>
+    function filterCat(catClass, element) {
+      var btns = document.querySelectorAll('.cat-btn');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove('active');
+      }
+      element.classList.add('active');
+
+      var cards = document.querySelectorAll('.card');
+      for (var j = 0; j < cards.length; j++) {
+        if (catClass === 'all' || cards[j].classList.contains(catClass)) {
+          cards[j].style.display = 'flex';
+        } else {
+          cards[j].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
